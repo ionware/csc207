@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bs.min.css">
+    <title>Lecture Note 4</title>
+    <!--<style>-->
+        <!--body {-->
+            <!--font-weight: 200;-->
+        <!--}-->
+    <!--</style>-->
+</head>
+<body>
+<div class="container border border-secondary p-5">
+    <div class="row justify-content-center mt-2">
+        <div class="col-sm-8 text-center">
+            <h3 class="text-uppercase mb-3 font-weight-bold">Creating Lists</h3>
+            <div class="text-left">
+                <p class="text-left">
+                    We are going to look at the <b>Ordered List</b>,
+                    <b>The unordered List</b>, and the <b>Definition List</b>
+                </p>
+                <p>
+                    HTML list can be used in structuring Items
+                </p>
+                <p>
+                    Ordered List: Also known as <b>Numbered List</b>, it allows us to create lists which reflect the level of
+                    hierarchy. Creating an Ordered List is done using the <b><code>ol</code></b> tag. <br>
+                </p>
+                <p>
+                    Each item of the list should be specified with the list item command <b><code>li</code></b>. <br>
+                    <b>NOTE:</b> Ordered list uses Arabic numerals as its default numbering type.
+                </p>
+                <p>
+                    Example:
+                </p>
+                <h3>Items required for School</h3>
+                <ol>
+                    <li>School Fees</li>
+                    <li>Food Stuff</li>
+                    <li>Pocket Money</li>
+                    <li>Books</li>
+                </ol>
+                <h5 class="font-weight-bold text-uppercase text-center">Attributes of Ordered Lists</h5>
+                <p>
+                    The two main <b>attributes</b> for an <b>OL</b> are: <b>type</b> and <b>start</b>.
+                    The numbering type can be modified using the <b>type</b> or <b>start</b> attributes in the <code>ol</code> tag.
+                    <br>
+                    Values for type attributes are <b>1, A, a, I or i</b>. <br>
+                    <b>Start</b> attribute specifies at what point to start counting from. The value for the <b>start</b> attribute
+                    is usually in Arabic numerals.
+                </p>
+                <p>Example: </p>
+                <ol type="A">
+                    <li>School Fees</li>
+                    <li>Food Stuff</li>
+                    <li>Pocket Money</li>
+                    <li>Books</li>
+                </ol>
+                <p class="font-weight-bold text-danger">
+                    The start attribute can only take value of numeral. It is used when we want to indicate when our numbering must begin
+                    from. By default, ordered list always begin from the first number. <span class="text-dark">Example below</span>
+                </p>
+                <ol type="A" start="7">
+                    <li>Laptop</li>
+                    <li>Hoodies</li>
+                </ol>
+                <h4 class="font-weight-bold text-uppercase text-center">Unordered Lists</h4>
+                <p>
+                    Another name for the unordered list is <b>Bullet List</b>. We make use of it when the items we want to
+                    list doesn't require ordering. To create an unordered list, we make use of the <code>ul</code> tag, which
+                    stands for <b>unordered list.</b> <br>
+                    It allows us to create list with various bullet styles. However, those bullets are images and thus do not relect
+                    the level of hierarchy except visually. <br>
+                    Example:
+                </p>
+                <ul>
+                    <li>School Fees</li>
+                    <li>Food Stuff</li>
+                    <li>Pocket Money</li>
+                    <li>Books</li>
+                </ul>
+                <h5 class="font-weight-bold text-uppercase text-center">Attributes of Unordered Lists</h5>
+                <p>
+                    The main attribute for <b>UL</b> is <b>type</b>. The type attribute is used to modify the look of the bullets.
+                    The value of <b>type</b> attribute are:  <b>disc, circle</b> or <b>square</b>.
+                    <br> Example:
+                </p>
+                <ul type="circle">
+                    <li>School Fees</li>
+                    <li>Food Stuff</li>
+                    <li>Pocket Money</li>
+                    <li>Books</li>
+                </ul>
+                <h4 class="font-weight-bold text-uppercase text-center">Definition Lists</h4>
+                <p>
+                    We use the definition list when we are trying to display a number of terms and associated definition.
+                    Allows us to create lists that are more like glossary.
+                    We use <code>dl</code> tag to define a term, and it stands for <code>definition list</code>, then followed by
+                    <code>dt</code> which stands for <code>definition term</code>, and followed by <code>dd</code>, meaning <code>definition data</code>.
+                    <br>
+                    Example:
+                </p>
+                <dl>
+                    <dt>Computer</dt>
+                    <dd>
+                        Computer is an electronic device capable of taking in inputs, processing this received inputs using set of pre-defined instructions
+                        and producing a meaningful output called <code>information</code>.
+                    </dd>
+                    <dt>Hardware</dt>
+                    <dd>
+                        Computer hardware are the components of a computer that can be touch and seen, Example include
+                        <ul>
+                            <li>Mouse</li>
+                            <li>Central Processing Unit (CPU)</li>
+                            <li>Printer, etc</li>
+                        </ul>
+                    </dd>
+                    <dt>Software</dt>
+                    <dd>Software components are the essential part of a computer system which cannot be seen but use.</dd>
+                </dl>
+                <h4 class="font-weight-bold text-uppercase text-center">Nested Lists</h4>
+                <p>
+                    Both ordered and unordered Lists can be nested. However, each sublist must be a complete list using the beginning and ending
+                    <code>ol</code> and/or the <code>ul</code> tags. <br>
+                    The browser assigns different bullet type to each level of nesting in a nested unordered list. The nested ordered list requires
+                    the specification of the numbering type for each level of nesting using the type attribute. <br>
+                    Each level of nesting is indented. <br>
+                    Example:
+                </p>
+                <ol>
+                    <li>
+                        School Fees
+                        <ol type="a">
+                            <li>Tuition</li>
+                            <li>Accommodation</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Food Stuff
+                        <ol type="i">
+                            <li>
+                                Provision
+                                <ul>
+                                    <li>
+                                        Milk
+                                        <ul>
+                                            <li>Peak</li>
+                                            <li>Three Crown</li>
+                                        </ul>
+                                    </li>
+                                    <li>Beverages</li>
+                                    <li>Sugar</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Food Stuffs
+                                <ul>
+                                    <li>Rice</li>
+                                    <li>Beans</li>
+                                </ul>
+                            </li>
+                            <li>Oil</li>
+                        </ol>
+                    </li>
+                    <li>Pocket Money</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
